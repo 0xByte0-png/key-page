@@ -1,9 +1,63 @@
 <!DOCTYPE html>
-<html>
-<head><title>0xByte Key</title></head>
-<body style="background-color:black; color:lime; font-family:monospace; text-align:center;">
-  <h1>🔐 0xByte GUI Access Key</h1>
-  <p style="font-size:24px;">0xByteAccess</p>
-  <p>Copy this key and paste it in your GUI.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>0xByte GUI Access</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    .button {
+      background-color: #111;
+      border: 1px solid #0f0;
+      color: #0f0;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .button:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔐 0xByte GUI Key System</h1>
+  <p>Verify you're human to unlock the GUI key.</p>
+
+  <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="captchaPassed"></div>
+
+  <div id="linkOptions" class="hidden">
+    <p>✅ Verified! Pick a task below:</p>
+    <button class="button" onclick="window.location.href='https://link-hub.net/1370832/JvsikTQK0i8i'">🔗 Linkvertise</button>
+    <button class="button" onclick="window.location.href='https://lootlabs.net/link/YOUR_LOOTLABS_ID'">🎁 LootLabs</button>
+  </div>
+
+  <script>
+    function captchaPassed() {
+      document.querySelector('.g-recaptcha').classList.add('hidden');
+      document.getElementById('linkOptions').classList.remove('hidden');
+    }
+  </script>
+
 </body>
 </html>
